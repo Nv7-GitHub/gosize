@@ -189,3 +189,5 @@ var gosymre = regexp.MustCompile(`
   )
 $
 `)
+
+var gopathpartsre = regexp.MustCompile(gopathparts)

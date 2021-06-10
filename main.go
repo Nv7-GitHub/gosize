@@ -31,5 +31,8 @@ func main() {
 	err := os.MkdirAll(outdir, os.ModePerm)
 	handle(err)
 
-	build(module)
+	sizes := build(module)
+	mapped := tab2dic(sizes)
+
+	fmt.Println(mapped)
 }
