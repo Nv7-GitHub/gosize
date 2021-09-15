@@ -54,6 +54,10 @@ func tab2dic(sizes string) map[string]interface{} {
 	gotyp_sz := 0
 
 	for _, line := range strings.Split(sizes, "\n") {
+		if len(line) == 0 {
+			continue
+		}
+
 		if undefre.Match([]byte(line)) {
 			continue
 		}
